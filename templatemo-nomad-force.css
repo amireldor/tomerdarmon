@@ -1,0 +1,1042 @@
+/*
+
+TemplateMo 567 Nomad Force
+
+https://templatemo.com/tm-567-nomad-force
+
+*/
+
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
+:root {
+  --white-color:                  #FFFFFF;
+  --primary-color:                #ffc107;
+  --section-bg-color:             #f9f9f9;
+  --dark-color:                   #000000;
+  --grey-color:                   #fcfeff;
+  --text-secondary-white-color:   rgba(255, 255, 255, 0.98);
+  --title-color:                  #565758;
+  --p-color:                      #717275;
+
+  --body-font-family:           'Noto Sans JP', sans-serif;
+
+  --h1-font-size:               72px;
+  --h2-font-size:               42px;
+  --h3-font-size:               36px;
+  --h4-font-size:               32px;
+  --h5-font-size:               24px;
+  --h6-font-size:               22px;
+  --p-font-size:                20px;
+  --copyright-text-font-size:   14px;
+  --custom-link-font-size:      12px;
+
+  --font-weight-light:          300;
+  --font-weight-normal:         400;
+  --font-weight-bold:           700;
+  --font-weight-black:          900;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+    background: var(--white-color);
+    font-family: var(--body-font-family);    
+    position: relative;
+}
+
+/*---------------------------------------
+  TYPOGRAPHY               
+-----------------------------------------*/
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color);
+  line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+}
+
+h1,
+h2 {
+  font-weight: var(--font-weight-black);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  line-height: normal;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+}
+
+p {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.5px;
+}
+
+.text-secondary-white-color {
+  color: var(--text-secondary-white-color);
+}
+
+a, 
+button {
+  touch-action: manipulation;
+  transition: all 0.3s;
+}
+
+a {
+  color: var(--p-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+::selection {
+  background: var(--dark-color);
+  color: var(--white-color);
+}
+
+.custom-underline {
+  border-bottom: 2px solid var(--white-color);
+  color: var(--white-color);
+  padding-bottom: 4px;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  z-index: -100;
+}
+
+
+.custom-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+
+.overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 50%);
+}
+/* Only target this specific video */
+#lncrehearsals-video {
+    position: absolute;
+    top: -230px; /* Adjust this value to control how much of the top is visible */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keeps entire video visible */
+}
+
+/* Ensure .videoWrapper is positioned for this video only */
+.videoWrapper {
+    position: relative;
+    padding-bottom: 60.25%; /* Aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+
+/*---------------------------------------
+  CUSTOM LINK               
+-----------------------------------------*/
+.custom-links {
+  max-width: 230px;
+}
+
+.custom-link {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: inline-block;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+}
+
+.custom-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  position: absolute;
+  left: auto;
+  right: 0;
+  z-index: -1;
+  transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+  background: currentColor;
+}
+
+.custom-link:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.custom-link:hover,
+.custom-link:hover::after {
+  color: var(--white-color);
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+/*---------------------------------------
+  NAVIGATION               
+-----------------------------------------*/
+
+.navbar {
+  z-index: 100;
+  right: 0;
+  left: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar-brand {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navbar-nav .nav-link::after {
+  content: "\f140";
+  font-family: bootstrap-icons;
+  display: inline-block;
+  margin-left: 10px;
+  color: var(--primary-color);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+.navbar-nav .nav-link:hover::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.navbar-nav .nav-link {
+  color: var(--p-color);
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-item.active .nav-link::after {
+  color: var(--primary-color);
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.nav-link:focus, 
+.nav-link:hover {
+  color: var(--dark-color);
+}
+
+.nav-link:focus {
+  color: var(--p-color);
+}
+
+.navbar-toggler {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  margin: 0;
+  width: 30px;
+  height: 35px;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background: var(--dark-color);
+  transition: background 10ms 300ms ease;
+  display: block;
+  width: 30px;
+  height: 2px;
+  position: relative;
+}
+
+.navbar-toggler .navbar-toggler-icon:before,
+.navbar-toggler .navbar-toggler-icon:after {
+  transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background: var(--dark-color);
+  width: 30px;
+  height: 2px;
+  content: '';
+}
+
+.navbar-toggler .navbar-toggler-icon:before {
+  top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon:after {
+  top: 8px;
+}
+
+/*---------------------------------------
+  HERO              
+-----------------------------------------*/
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  .hero {
+    height: 100vh;
+  }
+.heroTextWrapper {
+    position: absolute;
+    top: 20%; /* Adjust this value to raise/lower the text */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.videoWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+  .custom-video,
+  .news-detail-image {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .sticky-wrapper {
+    position: relative;
+    bottom: 76px;
+  }
+}
+
+.heroText {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  text-align: center;
+}
+/* Faded Gold */
+.heroText h1.faded-gold {
+  font-size: 48px; /* Adjust the size as needed */
+  color: #ffd700; /* Directly set the text color to shiny gold */
+  background: linear-gradient(90deg, #ffd700, #ffcc00, #e0c469); /* Gold gradient */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Fill color as transparent to show gradient */
+
+  /* 3D effect with shadows */
+  text-shadow: 
+    3px 3px 0 #000,    /* Black shadow for depth */
+    5px 5px 0 #444,    /* Darker shadow for more depth */
+    8px 8px 0 #888,    /* Lighter shadow for a softer 3D effect */
+    2px 2px 5px rgba(0, 0, 0, 0.5),   /* Soft shadow for depth */
+    0 0 20px rgba(255, 215, 0, 0.8), /* Gold glow */
+    0 0 40px rgba(255, 215, 0, 0.6); /* Larger glow for shine */
+  
+  font-weight: bold; /* Make the text bold for emphasis */
+}
+.row {
+    display: flex; /* Use flexbox for layout */
+    align-items: flex-start; /* Align items to the start of the container */
+}
+
+.framed-image {
+    width: 100%; /* Adjust this to resize the image to fit the right column */
+    max-width: 300px; /* Limit the maximum size */
+    border: 5px solid #ffd700; /* Gold frame */
+    padding: 10px; /* Space between the image and the frame */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for a 3D effect */
+    margin-left: 85px; /* This pushes the image to the right */
+}
+.band-section {
+    margin-top: 50px;
+}
+
+.text-and-image {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and image */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.text-content {
+    flex: 1; /* Allow the text to take up available space */
+    margin-right: 20px; /* Space between text and image */
+}
+
+.image-container {
+    flex: 0 0 auto; /* Prevent the image from shrinking */
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
+}
+
+.large-band-image {
+    width: 200%; /* Adjust this to resize the image */
+    max-width: 550px; /* Limit the maximum size */
+    border: 5px solid #ffd700; /* Gold frame */
+    padding: 10px; /* Space between the image and the frame */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for a 3D effect */
+}
+.album-section {
+    margin-top: 10px;
+	margin-bottom: 40px; /* Adds space below the entire section */
+}
+
+.text-and-image {
+    display: flex; /* Ensures text and image are in one row */
+    justify-content: space-between; /* Adds space between text and image */
+    align-items: flex-start; /* Align items to the top of the container */
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+}
+
+.text-content {
+    flex: 1; /* Allows text to take available space */
+    margin-right: 20px; /* Space between text and image */
+}
+
+.image-container {
+    flex: 0 0 auto; /* Prevents image from shrinking */
+    margin-left: 20px; /* Adjust margin to move the image further right */
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-start; /* Ensures image is aligned to the top */
+	 margin-bottom: 40px; /* Adds space below the image */
+}
+
+.large-disc-image {
+    width: auto; /* Makes the image responsive */
+    max-width: 550px; /* Set the maximum width */
+    border: 5px solid #ffd700; /* Gold frame */
+    padding: 10px; /* Space between the image and the frame */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for 3D effect */
+}
+
+/*---------------------------------------
+  ABOUT & TEAM MEMBERS               
+-----------------------------------------*/
+.about-image {
+	 width: 100%;
+  height: 80%;
+  max-height: 100px;
+  min-height: 475px;
+  object-fit: cover;
+}
+.team-image {
+  width: 100%;
+  height: 100%;
+  max-height: 635px;
+  min-height: 475px;
+  object-fit: cover;
+}
+
+.team-thumb {
+    background: var(--white-color); /* Default background */
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    width: 50%; /* Set a percentage width as needed */
+    max-width: 90%; /* Ensure it doesn’t exceed the container */
+	height: 50px; /* Set a fixed height */
+    padding: 5px 10px; /* Adjust padding to give space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for better visibility */
+}
+.team-thumb h3 {
+    font-size: 24px; /* Adjust the size as needed for the names */
+}
+
+.team-thumb p {
+    font-size: 16px; /* Adjust as needed for the titles */
+}
+
+
+.carousel-control-next, 
+.carousel-control-prev {
+  top: 10px; /* Keep this value to position arrows at the top */
+  bottom: auto; /* Reset bottom */
+  width: 3rem; /* Set width to ensure they are the same size */
+  height: 3rem; /* Set height to ensure they are the same size */
+}
+
+.carousel-control-prev {
+  right: 4rem; /* Adjust to give space between the arrows */
+  left: auto; /* Reset left */
+}
+
+.carousel-control-next {
+  right: 1rem; /* Adjust this value to separate the icons further */
+}
+
+.carousel-control-next-icon, 
+.carousel-control-prev-icon {
+  background-color: var(--dark-color);
+  background-size: 100% 100%;
+  border-radius: 100px;
+}
+
+
+/*---------------------------------------
+  COLUMN SECTIONS & BACKGROUNDS
+-----------------------------------------*/
+.col-lg-3.bg-dark {
+  height: 100%; /* Ensure it takes full height of its parent */
+  min-height: 475px; /* Adjust based on the guitars images height */
+}
+
+
+/*---------------------------------------
+  PORTFOLIO               
+-----------------------------------------*/
+
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-info {
+  margin: 20px;
+}
+
+/* New CSS for Album Cover and Icons */
+/* Ensure the album cover is centered */
+.album-cover {
+    width: 600px; /* Adjust width as needed */
+    max-width: 600px; /* Maximum width for the album cover */
+    height: auto; /* Keeps aspect ratio */
+    margin: 0 auto; /* Center the album cover */
+    display: block; /* Block level for centering */
+}
+
+.album-container {
+	margin-top: 20px; /* Adjust the space between the album cover and the icons */
+    display: flex; /* Enables flexbox for alignment */
+    justify-content: center; /* Centers the album cover horizontally */
+}
+
+/* Align icons and text horizontally */
+.icons-wrapper {
+    display: flex; /* Ensures the icons are aligned in a row */
+    justify-content: center; /* Centers the entire row of icons */
+    gap: 20px; /* Space between each icon set */
+    margin-top: 10px; /* Adjust margin if needed */
+}
+.icon-container {
+    display: flex; /* Aligns each icon and its text horizontally */
+    align-items: center; /* Vertically aligns the text and icon */
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon {
+    width: 60px; /* Same size for all icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Space between icon and its text */
+}
+
+
+.icon-container:hover {
+    transform: scale(1.1); /* Scale only the hovered icon and text */
+}
+
+/* Adjust the specific icon size if needed */
+.icon-apple {
+    width: 40px; /* Apply the correct size for Apple icon */
+    height: 40px; /* Adjust to your preferred size */
+}
+
+.icon-deezer {
+    width: 65px; /* Adjust to your preferred size */
+    height: 40px; /* Adjust to your preferred size */
+}
+.icon-text {
+    margin-left: 5px; /* Space between the icon and text */
+}
+/* Link styling inside the container */
+.icon-container a {
+    text-align: center;
+    display: inline-block;
+    font-size: 16px; /* Adjust text size */
+    color: black; /* Adjust text color */
+}
+
+#portfolio {
+    margin-top: 0; /* Try setting this to 0 */
+    padding-top: 70px; /* Ensure there's no padding */
+}
+
+/* Adjust the section above portfolio if it has excess space */
+.section-above-portfolio {
+    margin-bottom: 0; /* Reduce the bottom margin of the above section */
+}
+
+
+/*---------------------------------------
+  NEWS & EVENTS               
+-----------------------------------------*/
+
+.photo-gallery-title {
+    margin-top: -70px; /* Adjust this to move the title up */
+    margin-bottom: 30px; /* Adjust this to control space below the title */
+}
+
+.photogallery {
+  padding: 0;
+  gap: 20px;
+  height: 550px;
+  text-align:left;
+  
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: stretch;
+  justify-items: stretch;
+
+
+  
+  .long {
+    grid-row: span 2;
+    
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+  
+  figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+ 
+	z-index: 9;
+	padding: 2px 8px;
+  }
+}
+
+.news,
+.related-news {
+  background: var(--section-bg-color);
+}
+
+.news-thumb {
+  position: relative;
+  margin-left: 250px; /* Move the entire thumb container to the right */
+}
+
+.news-thumb img[src*="c1.jpg"] {
+  display: block; /* Ensure the image behaves like a block element */
+}
+
+.news-category {
+  background: var(--white-color);
+  padding: 4px 20px;
+  display: inline-block;
+  margin-left: 0; /* Remove margin-left since it will follow the thumb */
+}
+
+.news-thumb img[src*="c1.jpg"] + .news-category {
+  margin-top: 10px; /* Optional: add some space between the image and title */
+}
+
+.news-thumb img[src*="c1.jpg"] ~ .news-image-hover-warning::after {
+    left: 0; /* Start from the left of its parent */
+    width: 100%; /* Ensure it fills the width of its parent */
+    margin-left: 0; /* Ensure no left margin is applied */
+}
+
+
+
+
+.news-category {
+  background: var(--white-color);
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  padding: 4px 20px;
+  display: inline-block;
+}
+
+.news-text-info {
+  margin: 0 20px;
+}
+
+.news-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.news-title-link {
+  color: var(--title-color);
+  display: inline-block;
+}
+
+.news-title-link:hover {
+  color: var(--dark-color);
+}
+
+.portfolio-image,
+.news-image {
+  display: block;
+  transition: transform 0.6s ease-out;
+}
+
+.news-image-hover {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  padding-bottom: 4px;
+  height: 100%;
+}
+
+.news-image-hover::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  bottom: 0;
+  position: absolute;
+  left: auto;
+  right: 0;
+  z-index: -1;
+  transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+  background: #198754;
+}
+
+.news-image-hover-warning::after {
+  background: #ffc107;
+}
+
+.news-image-hover-primary::after {
+  background: #0d6efd;
+}
+
+.news-image-hover-success::after {
+  background: #198754;
+}
+
+.news-image-hover:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+  z-index: 9;
+}
+
+.image-popup:hover .portfolio-image,
+.news-image-hover:hover .news-image {
+  transform: scale(1.02);
+}
+
+.news-two-column {
+  min-height: 199px;
+  margin-bottom: 3px;
+  margin-left: 30px;
+}
+
+.news-two-column .news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 30px; /* Add space between the image and right edge of the container */
+}
+
+.social-share-link,
+.social-share-link + span {
+  color: rgba(255, 255, 255, 0.65);
+}
+h2 {
+    text-align: center; /* Centers the text inside the h2 element */
+}
+.align-left {
+    text-align: left; /* Aligns this specific h2 to the left */
+}
+
+.news-title {
+    display: flex;
+    justify-content: flex-start; /* Aligns the links to the left as a group */
+    margin-left: 120px; /* Adjust this value to control the entire group’s horizontal position */
+}
+
+.first-link {
+    margin-right: 55px; /* Controls space between the two links */
+}
+
+.news-title-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.news-title-link:hover {
+    color: #007bff;
+}
+
+
+
+/*---------------------------------------
+  SECTION               
+-----------------------------------------*/
+.section-padding {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+/*---------------------------------------
+  CONTACT              
+-----------------------------------------*/
+.contact-info {
+  padding: 40px;
+}
+
+.hover-underline {
+    display: inline;
+    color: black; /* You can change the color if needed */
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+    color: #0073b1; /* Optional: Change to LinkedIn's blue color when hovered */
+}
+
+
+/*---------------------------------------
+  SITE FOOTER               
+-----------------------------------------*/
+.site-footer {
+  background: var(--dark-color);
+  padding-top: 4.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.site-footer .custom-link {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: var(--p-font-size);
+}
+
+.site-footer .custom-link:hover,
+.site-footer .social-icon-link:hover {
+  color: var(--white-color);
+}
+
+.copyright-text {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: var(--copyright-text-font-size);
+}
+
+/*---------------------------------------
+  SOCIAL ICON               
+-----------------------------------------*/
+.social-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.social-icon li {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.social-icon-link {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 15px;
+}
+
+.social-icon-link:hover {
+  color: var(--primary-color);
+}
+
+/*---------------------------------------
+  RESPONSIVE STYLES               
+-----------------------------------------*/
+@media screen and (min-width: 1600px) {
+  .news-two-column {
+    min-height: 232.5px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .team-thumb {
+    left: 0;
+    width: auto;
+  }
+
+  .news-two-column {
+    height: auto !important;
+    min-height: inherit;
+  }
+
+  .news .col-12 .news-two-column:first-child {
+    margin-bottom: 38px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .news-detail-title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .heroText p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .news-detail-title {
+    font-size: 22px;
+  }
+}
+
+#guitars {
+  scroll-margin-top: 60px; /* Keeps the desired scroll margin */
+  padding-top: 60px; /* Add this to create space at the top of the section */
+  margin-top: -60px; /* Adjust this negative margin to pull the section up to avoid excessive space */
+}
+#news {
+  scroll-margin-top: 50px; /* Adjust this value as needed for news */
+}
