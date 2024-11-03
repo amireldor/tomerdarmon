@@ -62,9 +62,7 @@
             } else {
                 console.warn('News two-column element not found!');
             }
-        } else {
-            console.warn('Large news image element not found!');
-        }
+        } 
     }
 
     // הפעלת הפונקציה על resize ועל ready
