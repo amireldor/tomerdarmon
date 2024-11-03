@@ -10,35 +10,7 @@
         $(".navbar-collapse").collapse('hide');
     });
   
-    // Lightbox functionality
-    document.addEventListener('DOMContentLoaded', function () {
-        const lightboxLinks = document.querySelectorAll('.lightbox');
-
-        lightboxLinks.forEach(function (link) {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const existingLightbox = document.querySelector('.lightbox-overlay');
-                if (existingLightbox) {
-                    existingLightbox.remove();
-                }
-                
-                const lightboxOverlay = document.createElement('div');
-                lightboxOverlay.classList.add('lightbox-overlay', 'active');
-
-                const img = document.createElement('img');
-                img.src = this.href;
-                img.classList.add('lightbox-image');
-                lightboxOverlay.appendChild(img);
-
-                document.body.appendChild(lightboxOverlay);
-
-                lightboxOverlay.addEventListener('click', function () {
-                    lightboxOverlay.remove();
-                });
-            });
-        });
-    });
+   
 
     // NEWS IMAGE RESIZE
     function NewsImageResize() {
