@@ -21,15 +21,15 @@ https://templatemo.com/tm-567-nomad-force
 
   --body-font-family:           'Noto Sans JP', sans-serif;
 
-  --h1-font-size:               72px;
-  --h2-font-size:               42px;
-  --h3-font-size:               36px;
-  --h4-font-size:               32px;
-  --h5-font-size:               24px;
-  --h6-font-size:               22px;
-  --p-font-size:                20px;
-  --copyright-text-font-size:   14px;
-  --custom-link-font-size:      12px;
+   --h1-font-size:               4.5rem; /* 72px */
+  --h2-font-size:               2.625rem; /* 42px */
+  --h3-font-size:               2.25rem; /* 36px */
+  --h4-font-size:               2rem; /* 32px */
+  --h5-font-size:               1.5rem; /* 24px */
+  --h6-font-size:               1.375rem; /* 22px */
+  --p-font-size:                1.25rem; /* 20px */
+  --copyright-text-font-size:   0.875rem; /* 14px */
+  --custom-link-font-size:      0.75rem; /* 12px */
 
   --font-weight-light:          300;
   --font-weight-normal:         400;
@@ -104,7 +104,7 @@ p {
   color: var(--p-color);
   font-size: var(--p-font-size);
   font-weight: var(--font-weight-light);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.03125rem; /* 0.5px */
 }
 
 .text-secondary-white-color {
@@ -132,9 +132,9 @@ a:hover {
 }
 
 .custom-underline {
-  border-bottom: 2px solid var(--white-color);
+   border-bottom: 0.125rem solid var(--white-color); /* 2px */
   color: var(--white-color);
-  padding-bottom: 4px;
+  padding-bottom: 0.25rem; /* 4px / 16 = 0.25rem */
 }
 
 .videoWrapper {
@@ -161,11 +161,12 @@ a:hover {
 /* Only target this specific video */
 #lncrehearsals-video {
     position: absolute;
-    top: -230px; /* Adjust this value to control how much of the top is visible */
+     top: -14.375%; /* 230px מבוסס על יחס האחוזים למסך */
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: contain; /* Keeps entire video visible */
+	padding-bottom: 0.25rem; /* 4px */
 }
 
 /* Ensure .videoWrapper is positioned for this video only */
@@ -181,8 +182,9 @@ a:hover {
   CUSTOM LINK               
 -----------------------------------------*/
 .custom-links {
-  max-width: 230px;
+  max-width: 100%; /* התאמה לאחוזים במקום ערך פיקסלים */
 }
+
 
 .custom-link {
   position: relative;
@@ -195,7 +197,7 @@ a:hover {
 .custom-link::after {
   content: "";
   width: 0;
-  height: 2px;
+  height: 0.125rem; /* 2px */
   bottom: 0;
   position: absolute;
   left: auto;
@@ -229,34 +231,34 @@ strong {
   z-index: 100;
   right: 0;
   left: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 0.9375rem; /* 15px */
+  padding-bottom: 0.9375rem; /* 15px */
 }
 
 .navbar-brand {
   color: var(--primary-color);
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   font-weight: var(--font-weight-bold);
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding-right: 15px;
-  padding-left: 15px;
+ padding-right: 0.9375rem; /* 15px */
+  padding-left: 0.9375rem; /* 15px */
 }
 
 .navbar-nav .nav-link::after {
   content: "\f140";
   font-family: bootstrap-icons;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 0.625rem; /* 10px / 16 = 0.625rem */;
   color: var(--primary-color);
   opacity: 0;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+ -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   -moz-transition: opacity 0.3s, -moz-transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
-  -webkit-transform: translateY(10px);
-  -moz-transform: translateY(10px);
-  transform: translateY(10px);
+  -webkit-transform: translateY(0.625rem); /* 10px */
+  -moz-transform: translateY(0.625rem); /* 10px */
+  transform: translateY(0.625rem); /* 10px */
 }
 
 .navbar-nav .nav-link:hover::after {
@@ -268,7 +270,7 @@ strong {
 
 .navbar-nav .nav-link {
   color: var(--p-color);
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px / 16 = 1.125rem */
   font-weight: var(--font-weight-bold);
   position: relative;
 }
@@ -297,9 +299,9 @@ strong {
   padding: 0;
   cursor: pointer;
   margin: 0;
-  width: 30px;
-  height: 35px;
-  outline: none;
+ width: 2rem; /* לשנות מ-30px ל-2rem */
+    height: 3.5rem; /* לשנות מ-35px ל-3.5rem */
+    outline: none;
 }
 
 .navbar-toggler:focus {
@@ -314,8 +316,6 @@ strong {
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
   top: 0;
 }
 
@@ -331,31 +331,28 @@ strong {
   background: var(--dark-color);
   transition: background 10ms 300ms ease;
   display: block;
-  width: 30px;
-  height: 2px;
-  position: relative;
+   width: 2rem; /* לשנות מ-30px ל-2rem */
+    height: 0.2rem; /* לשנות מ-2px ל-0.2rem */
+    position: relative;
 }
 
 .navbar-toggler .navbar-toggler-icon:before,
 .navbar-toggler .navbar-toggler-icon:after {
-  transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
-  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
   position: absolute;
   right: 0;
   left: 0;
   background: var(--dark-color);
-  width: 30px;
-  height: 2px;
+  width: 1.875rem; /* 30px / 16 = 1.875rem */
+  height: 0.125rem; /* 2px / 16 = 0.125rem */
   content: '';
 }
 
 .navbar-toggler .navbar-toggler-icon:before {
-  top: -8px;
+   top: -0.5rem; /* -8px / 16 = -0.5rem */
 }
 
 .navbar-toggler .navbar-toggler-icon:after {
-  top: 8px;
+  top: 0.5rem; /* 8px / 16 = 0.5rem */
 }
 
 /*---------------------------------------
@@ -394,7 +391,7 @@ strong {
 
   .sticky-wrapper {
     position: relative;
-    bottom: 76px;
+    bottom: 10%; /* או 4.75rem אם אתה מעדיף */
   }
 }
 
@@ -409,20 +406,23 @@ strong {
 }
 /* Faded Gold */
 .heroText h1.faded-gold {
-  font-size: 48px; /* Adjust the size as needed */
+   font-size: 3rem; /* אם הבסיס הוא 16px, זה יהיה שווה ל-48px */
   color: #ffd700; /* Directly set the text color to shiny gold */
   background: linear-gradient(90deg, #ffd700, #ffcc00, #e0c469); /* Gold gradient */
   -webkit-background-clip: text; /* Clip the background to the text */
   -webkit-text-fill-color: transparent; /* Fill color as transparent to show gradient */
+font-weight: bold; /* טקסט מודגש להדגשה */
+ֽ}
+  
 
   /* 3D effect with shadows */
   text-shadow: 
-    3px 3px 0 #000,    /* Black shadow for depth */
-    5px 5px 0 #444,    /* Darker shadow for more depth */
-    8px 8px 0 #888,    /* Lighter shadow for a softer 3D effect */
-    2px 2px 5px rgba(0, 0, 0, 0.5),   /* Soft shadow for depth */
-    0 0 20px rgba(255, 215, 0, 0.8), /* Gold glow */
-    0 0 40px rgba(255, 215, 0, 0.6); /* Larger glow for shine */
+    0.1875rem 0.1875rem 0 #000,    /* צל שחור לעומק */
+    0.3125rem 0.3125rem 0 #444,    /* צל כהה יותר לעומק נוסף */
+    0.5rem 0.5rem 0 #888,          /* צל בהיר יותר לאפקט רך יותר */
+    0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.5), /* צל רך לעומק */
+    0 0 1.25rem rgba(255, 215, 0, 0.8), /* זוהר זהב */
+    0 0 2.5rem rgba(255, 215, 0, 0.6); /* זוהר גדול יותר לניצוץ */
   
   font-weight: bold; /* Make the text bold for emphasis */
 }
@@ -432,15 +432,24 @@ strong {
 }
 
 .framed-image {
-    width: 100%; /* Adjust this to resize the image to fit the right column */
-    max-width: 300px; /* Limit the maximum size */
-    border: 5px solid #ffd700; /* Gold frame */
-    padding: 10px; /* Space between the image and the frame */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for a 3D effect */
-    margin-left: 85px; /* This pushes the image to the right */
+    width: 100%; /* רוחב 100% כדי להתאים לעמודה הנכונה */
+    max-width: 18.75rem; /* 300px / 16 - מקסימום רוחב */
+    border: 0.3125rem solid #ffd700; /* מסגרת זהב - 5px / 16 */
+    padding: 0.625rem; /* ריווח פנימי - 10px / 16 */
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5); /* צל - 5px, 15px / 16 */
+    margin-left: 5.3125rem; /* ריווח שמאלי - 85px / 16 */
+}
+
+/* מדיה קוורי להתאמה למסכים קטנים */
+@media screen and (max-width: 767px) {
+    .framed-image {
+        max-width: 80%; /* רוחב מקסימלי מותאם למסכים קטנים */
+        margin-left: auto; /* מרכז את התמונה */
+        margin-right: auto; /* מרכז את התמונה */
+    }
 }
 .band-section {
-    margin-top: 50px;
+    margin-top: 3.125rem; /* 50px / 16 */
 }
 
 .text-and-image {
@@ -451,7 +460,7 @@ strong {
 
 .text-content {
     flex: 1; /* Allow the text to take up available space */
-    margin-right: 20px; /* Space between text and image */
+    margin-right: 1.25rem; /* 20px / 16 */
 }
 
 .image-container {
@@ -462,14 +471,14 @@ strong {
 
 .large-band-image {
     width: 200%; /* Adjust this to resize the image */
-    max-width: 550px; /* Limit the maximum size */
-    border: 5px solid #ffd700; /* Gold frame */
-    padding: 10px; /* Space between the image and the frame */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for a 3D effect */
+    max-width: 34.375rem; /* 550px / 16 */
+    border: 0.3125rem solid #ffd700; /* 5px / 16 */
+    padding: 0.625rem; /* 10px / 16 */
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5); /* 5px, 15px / 16 */
 }
 .album-section {
-    margin-top: 10px;
-	margin-bottom: 40px; /* Adds space below the entire section */
+    margin-top: 0.625rem; /* 10px / 16 */
+    margin-bottom: 2.5rem; /* 40px / 16 */
 }
 
 .text-and-image {
@@ -481,24 +490,24 @@ strong {
 
 .text-content {
     flex: 1; /* Allows text to take available space */
-    margin-right: 20px; /* Space between text and image */
+    margin-right: 1.25rem; /* 20px / 16 */
 }
 
 .image-container {
     flex: 0 0 auto; /* Prevents image from shrinking */
-    margin-left: 20px; /* Adjust margin to move the image further right */
+    margin-left: 1.25rem; /* 20px / 16 */
     display: flex;
     justify-content: flex-end;
     align-self: flex-start; /* Ensures image is aligned to the top */
-	 margin-bottom: 40px; /* Adds space below the image */
+    margin-bottom: 2.5rem; /* 40px / 16 */
 }
 
 .large-disc-image {
     width: auto; /* Makes the image responsive */
-    max-width: 550px; /* Set the maximum width */
-    border: 5px solid #ffd700; /* Gold frame */
-    padding: 10px; /* Space between the image and the frame */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for 3D effect */
+    max-width: 34.375rem; /* 550px / 16 */
+    border: 0.3125rem solid #ffd700; /* 5px / 16 */
+    padding: 0.625rem; /* 10px / 16 */
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5); /* 5px, 15px / 16 */
 }
 
 /*---------------------------------------
@@ -507,15 +516,15 @@ strong {
 .about-image {
 	 width: 100%;
   height: 80%;
-  max-height: 100px;
-  min-height: 475px;
+  max-height: 6.25rem; /* 100px / 16 */
+  min-height: 29.6875rem; /* 475px / 16 */
   object-fit: cover;
 }
 .team-image {
   width: 100%;
   height: 100%;
-  max-height: 635px;
-  min-height: 475px;
+  max-height: 39.6875rem; /* 635px / 16 */
+  min-height: 29.6875rem; /* 475px / 16 */
   object-fit: cover;
 }
 
@@ -526,16 +535,16 @@ strong {
     right: 0; 
     width: 50%; /* Set a percentage width as needed */
     max-width: 90%; /* Ensure it doesn’t exceed the container */
-	height: 50px; /* Set a fixed height */
-    padding: 5px 10px; /* Adjust padding to give space */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for better visibility */
+	height: 3.125rem; /* 50px / 16 */
+    padding: 0.3125rem 0.625rem; /* 5px, 10px / 16 */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px, 8px / 16 */
 }
 .team-thumb h3 {
-    font-size: 24px; /* Adjust the size as needed for the names */
+     font-size: 1.5rem; /* 24px / 16 */
 }
 
 .team-thumb p {
-    font-size: 16px; /* Adjust as needed for the titles */
+    font-size: 1rem; /* 16px / 16 */
 }
 
 
@@ -560,7 +569,7 @@ strong {
 .carousel-control-prev-icon {
   background-color: var(--dark-color);
   background-size: 100% 100%;
-  border-radius: 100px;
+    border-radius: 6.25rem; /* 100px / 16 */
 }
 
 
@@ -569,7 +578,7 @@ strong {
 -----------------------------------------*/
 .col-lg-3.bg-dark {
   height: 100%; /* Ensure it takes full height of its parent */
-  min-height: 475px; /* Adjust based on the guitars images height */
+  min-height: 29.6875rem; /* 475px / 16 */
 }
 
 
@@ -583,21 +592,21 @@ strong {
 }
 
 .portfolio-info {
-  margin: 20px;
+   margin: 1.25rem; /* 20px / 16 */
 }
 
 /* New CSS for Album Cover and Icons */
 /* Ensure the album cover is centered */
 .album-cover {
-    width: 600px; /* Adjust width as needed */
-    max-width: 600px; /* Maximum width for the album cover */
+    width: 37.5rem; /* 600px / 16 */
+   max-width: 37.5rem; /* 600px / 16 */
     height: auto; /* Keeps aspect ratio */
     margin: 0 auto; /* Center the album cover */
     display: block; /* Block level for centering */
 }
 
 .album-container {
-	margin-top: 20px; /* Adjust the space between the album cover and the icons */
+	margin-top: 1.25rem; /* 20px / 16 */
     display: flex; /* Enables flexbox for alignment */
     justify-content: center; /* Centers the album cover horizontally */
 }
@@ -606,8 +615,8 @@ strong {
 .icons-wrapper {
     display: flex; /* Ensures the icons are aligned in a row */
     justify-content: center; /* Centers the entire row of icons */
-    gap: 20px; /* Space between each icon set */
-    margin-top: 10px; /* Adjust margin if needed */
+    gap: 1.25rem; /* 20px / 16 */
+    margin-top: 0.625rem; /* 10px / 16 *
 }
 .icon-container {
     display: flex; /* Aligns each icon and its text horizontally */
@@ -616,9 +625,9 @@ strong {
 }
 
 .icon {
-    width: 60px; /* Same size for all icons */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 5px; /* Space between icon and its text */
+    width: 3.75rem; /* 60px / 16 */
+    height: auto; /* שומר על יחס */
+    margin-right: 0.3125rem; /* 5px / 16 */
 }
 
 
@@ -628,28 +637,28 @@ strong {
 
 /* Adjust the specific icon size if needed */
 .icon-apple {
-    width: 40px; /* Apply the correct size for Apple icon */
-    height: 40px; /* Adjust to your preferred size */
+     width: 2.5rem; /* 40px / 16 */
+    height: 2.5rem; /* 40px / 16 */
 }
 
 .icon-deezer {
-    width: 65px; /* Adjust to your preferred size */
-    height: 40px; /* Adjust to your preferred size */
+    width: 4.0625rem; /* 65px / 16 */
+    height: 2.5rem; /* 40px / 16 */
 }
 .icon-text {
-    margin-left: 5px; /* Space between the icon and text */
+    margin-left: 0.3125rem; /* 5px / 16 */
 }
 /* Link styling inside the container */
 .icon-container a {
     text-align: center;
     display: inline-block;
-    font-size: 16px; /* Adjust text size */
+    font-size: 1rem; /* 16px / 16 */
     color: black; /* Adjust text color */
 }
 
 #portfolio {
     margin-top: 0; /* Try setting this to 0 */
-    padding-top: 70px; /* Ensure there's no padding */
+    padding-top: 4.375rem; /* 70px / 16 */
 }
 
 /* Adjust the section above portfolio if it has excess space */
@@ -663,22 +672,23 @@ strong {
 -----------------------------------------*/
 
 .photo-gallery-title {
-    margin-top: -70px; /* Adjust this to move the title up */
-    margin-bottom: 30px; /* Adjust this to control space below the title */
+   margin-top: -4.375rem; /* -70px / 16 */
+    margin-bottom: 1.875rem; /* 30px / 16 */
 }
 
 .photogallery {
   padding: 0;
-  gap: 20px;
-  height: 550px;
+  gap: 1.25rem; /* 20px / 16 */
+    height: 34.375rem; /* 550px / 16 */
   text-align:left;
   
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: stretch;
-  justify-items: stretch;
-
+    align-items: stretch;
+    justify-items: stretch;
+}
 
   
   .long {
@@ -709,7 +719,7 @@ strong {
     left: 0;
  
 	z-index: 9;
-	padding: 2px 8px;
+	padding: 0.125rem 0.5rem; /* 2px, 8px / 16 */
   }
 }
 
@@ -720,7 +730,7 @@ strong {
 
 .news-thumb {
   position: relative;
-  margin-left: 250px; /* Move the entire thumb container to the right */
+  margin-left: 15.625rem; /* 250px / 16 */
 }
 
 .news-thumb img[src*="c1.jpg"] {
@@ -729,7 +739,7 @@ strong {
 
 .news-category {
   background: var(--white-color);
-  padding: 4px 20px;
+  padding: 0.25rem 1.25rem; /* 4px ו-20px */
   display: inline-block;
   margin-left: 0; /* Remove margin-left since it will follow the thumb */
 }
@@ -758,12 +768,12 @@ strong {
 }
 
 .news-text-info {
-  margin: 0 20px;
+  margin: 0 1.25rem; /* 20px */
 }
 
 .news-title {
-  margin-top: 15px;
-  margin-bottom: 15px;
+   margin-top: 0.9375rem; /* 15px */
+    margin-bottom: 0.9375rem; /* 15px */
 }
 
 .news-title-link {
@@ -787,14 +797,14 @@ strong {
   overflow: hidden;
   z-index: 1;
   transition: all .3s cubic-bezier(.645,.045,.355,1);
-  padding-bottom: 4px;
+  padding-bottom: 0.25rem; /* 4px */
   height: 100%;
 }
 
 .news-image-hover::after {
   content: "";
   width: 0;
-  height: 4px;
+  height: 0.25rem; /* 4px */
   bottom: 0;
   position: absolute;
   left: auto;
@@ -829,9 +839,9 @@ strong {
 }
 
 .news-two-column {
-  min-height: 199px;
-  margin-bottom: 3px;
-  margin-left: 30px;
+  min-height: 12.4375rem; /* 199px */
+    margin-bottom: 0.1875rem; /* 3px */
+    margin-left: 1.875rem; /* 30px */
 }
 
 .news-two-column .news-image {
@@ -855,11 +865,11 @@ h2 {
 .news-title {
     display: flex;
     justify-content: flex-start; /* Aligns the links to the left as a group */
-    margin-left: 120px; /* Adjust this value to control the entire group’s horizontal position */
+   margin-left: 7.5rem; /* 120px */
 }
 
 .first-link {
-    margin-right: 55px; /* Controls space between the two links */
+   margin-right: 3.4375rem; /* 55px */
 }
 
 .news-title-link {
@@ -885,7 +895,7 @@ h2 {
   CONTACT              
 -----------------------------------------*/
 .contact-info {
-  padding: 40px;
+  padding: 2.5rem; /* 40px */
 }
 
 .hover-underline {
@@ -942,9 +952,9 @@ h2 {
   font-size: 1rem;
   display: inline-block;
   vertical-align: top;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-right: 15px;
+  margin-top: 0.25rem; /* 4px */
+    margin-bottom: 0.25rem; /* 4px */
+    margin-right: 0.9375rem; /* 15px */
 }
 
 .social-icon-link:hover {
@@ -954,40 +964,40 @@ h2 {
 /*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
-@media screen and (min-width: 1600px) {
-  .news-two-column {
-    min-height: 232.5px;
+@media screen and (min-width: 100rem) { /* 1600px */
+    .news-two-column {
+        min-height: 14.53125rem; /* 232.5px */
   }
 }
 
-@media screen and (max-width: 991px) {
-  h1 {
-    font-size: 48px;
+@media screen and (max-width: 61.9375rem) { /* 991px */
+    h1 {
+        font-size: 3rem; /* 48px */;
   }
 
   h2 {
-    font-size: 36px;
-  }
+        font-size: 2.25rem; /* 36px */
+    }
 
-  h3 {
-    font-size: 32px;
-  }
+    h3 {
+        font-size: 2rem; /* 32px */
+    }
 
-  h4 {
-    font-size: 28px;
+    h4 {
+        font-size: 1.75rem; /* 28px */
   }
 
   h5 {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
   }
 
   h6 {
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
   }
 
   .navbar {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.625rem; /* 10px */
+    padding-bottom: 0.625rem; /* 10px */
   }
 
   .section-padding {
@@ -1006,37 +1016,37 @@ h2 {
   }
 
   .news .col-12 .news-two-column:first-child {
-    margin-bottom: 38px;
+     margin-bottom: 2.375rem; /* 38px */
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 47.9375rem) { /* 767px */
   .news-detail-title {
-    font-size: 36px;
+    font-size: 2.25rem; /* 36px */
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 22.5rem) { /* 360px */
   h1 {
-    font-size: 32px;
+    font-size: 2rem; /* 32px */
   }
 
   .heroText p {
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px */
   }
 }
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 22.4375rem) { /* 359px */
   .news-detail-title {
-    font-size: 22px;
+    font-size: 1.375rem; /* 22px */
   }
 }
 
 #guitars {
-  scroll-margin-top: 60px; /* Keeps the desired scroll margin */
-  padding-top: 60px; /* Add this to create space at the top of the section */
-  margin-top: -60px; /* Adjust this negative margin to pull the section up to avoid excessive space */
+  scroll-margin-top: 3.75rem; /* 60px */
+  padding-top: 3.75rem; /* 60px */
+  margin-top: -3.75rem; /* -60px */
 }
 #news {
-  scroll-margin-top: 50px; /* Adjust this value as needed for news */
+  scroll-margin-top: 3.125rem; /* 50px */
 }
