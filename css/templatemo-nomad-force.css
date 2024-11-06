@@ -363,91 +363,127 @@ strong {
   overflow: hidden;
 }
 
-@media screen and (min-width: 992px) {
-  .hero {
-    height: 100vh;
-  }
-.heroTextWrapper {
-    position: absolute;
-    top: 20%; /* Adjust this value to raise/lower the text */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.videoWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-  .custom-video,
-  .news-detail-image {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-  }
+@media screen and (min-width: 768px) {
+    .hero {
+        height: 100vh;
+    }
+    
+    .videoWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 
-  .sticky-wrapper {
-    position: relative;
-    bottom: 10%; /* או 4.75rem אם אתה מעדיף */
-  }
-}
+    .heroTextWrapper {
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-.heroText {
-  position: absolute;
-  z-index: 9;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 85%;
-  text-align: center;
-}
-/* Faded Gold */
-.heroText h1.faded-gold {
-   font-size: 3rem; /* אם הבסיס הוא 16px, זה יהיה שווה ל-48px */
-  color: #ffd700; /* Directly set the text color to shiny gold */
-  background: linear-gradient(90deg, #ffd700, #ffcc00, #e0c469); /* Gold gradient */
-  -webkit-background-clip: text; /* Clip the background to the text */
-  -webkit-text-fill-color: transparent; /* Fill color as transparent to show gradient */
-font-weight: bold; /* טקסט מודגש להדגשה */
-ֽ}
-  
+    .heroText {
+        position: absolute;
+        z-index: 9;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        text-align: center;
+    }
 
-  /* 3D effect with shadows */
-  text-shadow: 
-    0.1875rem 0.1875rem 0 #000,    /* צל שחור לעומק */
-    0.3125rem 0.3125rem 0 #444,    /* צל כהה יותר לעומק נוסף */
-    0.5rem 0.5rem 0 #888,          /* צל בהיר יותר לאפקט רך יותר */
-    0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.5), /* צל רך לעומק */
-    0 0 1.25rem rgba(255, 215, 0, 0.8), /* זוהר זהב */
-    0 0 2.5rem rgba(255, 215, 0, 0.6); /* זוהר גדול יותר לניצוץ */
-  
-  font-weight: bold; /* Make the text bold for emphasis */
-}
-.row {
-    display: flex; /* Use flexbox for layout */
-    align-items: flex-start; /* Align items to the start of the container */
-}
+    .custom-video,
+    .news-detail-image {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .sticky-wrapper {
+        position: relative;
+        bottom: 10%; 
+    }
 
-.framed-image {
-    width: 100%; /* רוחב 100% כדי להתאים לעמודה הנכונה */
-    max-width: 18.75rem; /* 300px / 16 - מקסימום רוחב */
-    border: 0.3125rem solid #ffd700; /* מסגרת זהב - 5px / 16 */
-    padding: 0.625rem; /* ריווח פנימי - 10px / 16 */
-    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5); /* צל - 5px, 15px / 16 */
-    margin-left: 5.3125rem; /* ריווח שמאלי - 85px / 16 */
-}
+    .heroText h1.faded-gold {
+        font-size: 3rem; 
+        color: #ffd700; 
+        background: linear-gradient(90deg, #ffd700, #ffcc00, #e0c469);
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        font-weight: bold; 
+        
+        /* 3D effect with shadows */
+        text-shadow: 
+            0.1875rem 0.1875rem 0 #000,    
+            0.3125rem 0.3125rem 0 #444,    
+            0.5rem 0.5rem 0 #888,          
+            0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.5), 
+            0 0 1.25rem rgba(255, 215, 0, 0.8), 
+            0 0 2.5rem rgba(255, 215, 0, 0.6); 
+    }
+    
+    .row {
+        display: flex; 
+        align-items: flex-start; 
+    }
 
-/* מדיה קוורי להתאמה למסכים קטנים */
-@media screen and (max-width: 767px) {
     .framed-image {
-        max-width: 80%; /* רוחב מקסימלי מותאם למסכים קטנים */
-        margin-left: auto; /* מרכז את התמונה */
-        margin-right: auto; /* מרכז את התמונה */
+        width: 100%; 
+        max-width: 18.75rem; 
+        border: 0.3125rem solid #ffd700; 
+        padding: 0.625rem; 
+        box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5); 
+        margin-left: 5.3125rem; 
     }
 }
+
+
+/* מדיה קוורי להתאמה למסכים ברוחב מינימלי 768px */
+@media screen and (min-width: 768px) {
+    /* התאמות פרופורציות ווידאו */
+    .videoWrapper {
+        padding-bottom: 75%; /* ניתן לשנות או להוסיף פרופורציות בהתאם לצורך */
+    }
+
+    .custom-video {
+        top: 0;
+        left: 0;
+        padding-bottom: 0; /* במידה ואין צורך, אפשר לשנות */
+    }
+
+    /* הגדלים עבור כותרות ופסקאות */
+    :root {
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.875rem;
+        --h3-font-size: 1.5rem;
+        --h4-font-size: 1.25rem;
+        --h5-font-size: 1.125rem;
+        --h6-font-size: 1rem;
+        --p-font-size: 1rem;
+    }
+
+    /* ריווח כותרות ופסקאות */
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+}
+
+    /* סגנונות לתמונה ממוסגרת */
+    .framed-image {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 .band-section {
     margin-top: 3.125rem; /* 50px / 16 */
 }
@@ -672,55 +708,49 @@ font-weight: bold; /* טקסט מודגש להדגשה */
 -----------------------------------------*/
 
 .photo-gallery-title {
-   margin-top: -4.375rem; /* -70px / 16 */
-    margin-bottom: 1.875rem; /* 30px / 16 */
+  margin-top: -4.375rem; /* -70px / 16 */
+  margin-bottom: 1.875rem; /* 30px / 16 */
 }
 
 .photogallery {
   padding: 0;
   gap: 1.25rem; /* 20px / 16 */
-    height: 34.375rem; /* 550px / 16 */
-  text-align:left;
-  
+  height: 34.375rem; /* 550px / 16 */
+  text-align: left;
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: stretch;
-    align-items: stretch;
-    justify-items: stretch;
+  justify-items: stretch;
 }
 
-  
-  .long {
-    grid-row: span 2;
-    
+.long {
+  grid-row: span 2;
 
-    img {
-      width: auto;
-      height: 100%;
-    }
+  img {
+    width: auto;
+    height: 100%;
   }
-  
-  figure {
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+}
+
+figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  
-  figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
- 
-	z-index: 9;
-	padding: 0.125rem 0.5rem; /* 2px, 8px / 16 */
-  }
+}
+
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  padding: 0.125rem 0.5rem; /* 2px, 8px / 16 */
 }
 
 .news,
@@ -737,11 +767,15 @@ font-weight: bold; /* טקסט מודגש להדגשה */
   display: block; /* Ensure the image behaves like a block element */
 }
 
+/* Combine categories to avoid duplicates */
 .news-category {
   background: var(--white-color);
-  padding: 0.25rem 1.25rem; /* 4px ו-20px */
+  padding: 0.25rem 1.25rem; /* 4px, 20px */
   display: inline-block;
-  margin-left: 0; /* Remove margin-left since it will follow the thumb */
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
 }
 
 .news-thumb img[src*="c1.jpg"] + .news-category {
@@ -749,31 +783,20 @@ font-weight: bold; /* טקסט מודגש להדגשה */
 }
 
 .news-thumb img[src*="c1.jpg"] ~ .news-image-hover-warning::after {
-    left: 0; /* Start from the left of its parent */
-    width: 100%; /* Ensure it fills the width of its parent */
-    margin-left: 0; /* Ensure no left margin is applied */
-}
-
-
-
-
-.news-category {
-  background: var(--white-color);
-  position: absolute;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  padding: 4px 20px;
-  display: inline-block;
+  left: 0; /* Start from the left of its parent */
+  width: 100%; /* Ensure it fills the width of its parent */
+  margin-left: 0; /* Ensure no left margin is applied */
 }
 
 .news-text-info {
   margin: 0 1.25rem; /* 20px */
 }
-
 .news-title {
-   margin-top: 0.9375rem; /* 15px */
+    margin-top: 0.9375rem; /* 15px */
     margin-bottom: 0.9375rem; /* 15px */
+    display: flex;
+    justify-content: flex-start; /* Aligns the links to the left as a group */
+    margin-left: 7.5rem; /* 120px */
 }
 
 .news-title-link {
@@ -796,7 +819,7 @@ font-weight: bold; /* טקסט מודגש להדגשה */
   position: relative;
   overflow: hidden;
   z-index: 1;
-  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  transition: all .3s cubic-bezier(.645, .045, .355, 1);
   padding-bottom: 0.25rem; /* 4px */
   height: 100%;
 }
@@ -810,7 +833,7 @@ font-weight: bold; /* טקסט מודגש להדגשה */
   left: auto;
   right: 0;
   z-index: -1;
-  transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+  transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
   background: #198754;
 }
 
@@ -840,8 +863,8 @@ font-weight: bold; /* טקסט מודגש להדגשה */
 
 .news-two-column {
   min-height: 12.4375rem; /* 199px */
-    margin-bottom: 0.1875rem; /* 3px */
-    margin-left: 1.875rem; /* 30px */
+  margin-bottom: 0.1875rem; /* 3px */
+  margin-left: 1.875rem; /* 30px */
 }
 
 .news-two-column .news-image {
@@ -855,32 +878,48 @@ font-weight: bold; /* טקסט מודגש להדגשה */
 .social-share-link + span {
   color: rgba(255, 255, 255, 0.65);
 }
+
 h2 {
-    text-align: center; /* Centers the text inside the h2 element */
-}
-.align-left {
-    text-align: left; /* Aligns this specific h2 to the left */
+  text-align: center; /* Centers the text inside the h2 element */
 }
 
-.news-title {
-    display: flex;
-    justify-content: flex-start; /* Aligns the links to the left as a group */
-   margin-left: 7.5rem; /* 120px */
+.align-left {
+  text-align: left; /* Aligns this specific h2 to the left */
 }
+
 
 .first-link {
-   margin-right: 3.4375rem; /* 55px */
+  margin-right: 3.4375rem; /* 55px */
 }
 
 .news-title-link {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 .news-title-link:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
+/* Media Queries */
+@media (min-width: 768px) {
+  .news-thumb {
+    margin-left: 0; /* Adjust margin for larger screens */
+  }
+
+  .photogallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 עמודות במחשב */
+  }
+
+  .news-title {
+    margin-left: 0; /* להסיר רווחים במחשב */
+  }
+
+  /* הוסף סגנונות נוספים כאן לפי הצורך */
+  
+  grid-template-columns: 1fr 1fr; /* 2 עמודות על מסכים קטנים יותר */
+
+}
 
 
 /*---------------------------------------
@@ -908,7 +947,6 @@ h2 {
     color: #0073b1; /* Optional: Change to LinkedIn's blue color when hovered */
 }
 
-
 /*---------------------------------------
   SITE FOOTER               
 -----------------------------------------*/
@@ -933,6 +971,29 @@ h2 {
   font-size: var(--copyright-text-font-size);
 }
 
+/* Media Queries */
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 10rem; /* Adjust padding for larger screens */
+    padding-bottom: 10rem;
+  }
+
+  .contact-info {
+    padding: 3rem; /* Adjust padding for larger screens */
+  }
+
+  .site-footer {
+    padding-top: 6rem; /* Adjust padding for larger screens */
+    padding-bottom: 3rem;
+  }
+
+  .site-footer .custom-link {
+    font-size: 1.2rem; /* Adjust font size for larger screens */
+  }
+
+  /* הוסף סגנונות נוספים כאן לפי הצורך */
+}
+
 /*---------------------------------------
   SOCIAL ICON               
 -----------------------------------------*/
@@ -953,8 +1014,8 @@ h2 {
   display: inline-block;
   vertical-align: top;
   margin-top: 0.25rem; /* 4px */
-    margin-bottom: 0.25rem; /* 4px */
-    margin-right: 0.9375rem; /* 15px */
+  margin-bottom: 0.25rem; /* 4px */
+  margin-right: 0.9375rem; /* 15px */
 }
 
 .social-icon-link:hover {
@@ -964,27 +1025,42 @@ h2 {
 /*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
-@media screen and (min-width: 100rem) { /* 1600px */
-    .news-two-column {
-        min-height: 14.53125rem; /* 232.5px */
+@media screen and (min-width: 768px) { /* 768px ומעלה */
+  .social-icon-link {
+    font-size: 1.25rem; /* הגדלת גודל הפונט למסכים גדולים יותר */
+    margin-right: 1.25rem; /* מרווח גדול יותר בין האייקונים */
+  }
+
+  .social-icon {
+    display: flex;
+    justify-content: center; /* מיישר את האייקונים למרכז */
+    align-items: center;
   }
 }
 
+/* Media Queries for large screens */
+@media screen and (min-width: 100rem) { /* 1600px */
+  .news-two-column {
+    min-height: 14.53125rem; /* 232.5px */
+  }
+}
+
+/* Media Queries for medium screens */
 @media screen and (max-width: 61.9375rem) { /* 991px */
-    h1 {
-        font-size: 3rem; /* 48px */;
+  h1 {
+    font-size: 3rem; /* 48px */
   }
 
   h2 {
-        font-size: 2.25rem; /* 36px */
-    }
+    font-size: 2.25rem; /* 36px */
+  }
 
-    h3 {
-        font-size: 2rem; /* 32px */
-    }
+  h3 {
+    font-size: 2rem; /* 32px */
+  }
 
-    h4 {
-        font-size: 1.75rem; /* 28px */
+  h4 {
+    font-size: 1.75rem; /* 28px */
   }
 
   h5 {
@@ -1016,16 +1092,18 @@ h2 {
   }
 
   .news .col-12 .news-two-column:first-child {
-     margin-bottom: 2.375rem; /* 38px */
+    margin-bottom: 2.375rem; /* 38px */
   }
 }
 
+/* Mobile screens */
 @media screen and (max-width: 47.9375rem) { /* 767px */
   .news-detail-title {
     font-size: 2.25rem; /* 36px */
   }
 }
 
+/* Very small screens (e.g., mobile phones) */
 @media screen and (max-width: 22.5rem) { /* 360px */
   h1 {
     font-size: 2rem; /* 32px */
@@ -1047,6 +1125,305 @@ h2 {
   padding-top: 3.75rem; /* 60px */
   margin-top: -3.75rem; /* -60px */
 }
+
 #news {
   scroll-margin-top: 3.125rem; /* 50px */
+}
+
+/* התאמה למסכים קטנים (מובייל) */
+@media (max-width: 767px) {
+    :root {
+        /* הגדלים עבור כותרות ופסקאות */
+        --h1-font-size: 2.5rem; /* הקטנה לכותרת H1 */
+        --h2-font-size: 1.875rem; /* הקטנה לכותרת H2 */
+        --h3-font-size: 1.5rem; /* הקטנה לכותרת H3 */
+        --h4-font-size: 1.25rem; /* הקטנה לכותרת H4 */
+        --h5-font-size: 1.125rem; /* הקטנה לכותרת H5 */
+        --h6-font-size: 1rem; /* הקטנה לכותרת H6 */
+        --p-font-size: 1rem; /* גודל פסקאות */
+    }
+
+    /* התאמות לפריסות */
+    .videoWrapper {
+        padding-bottom: 75%; /* שינוי יחס גובה-רוחב לווידאו */
+    }
+    
+    .custom-video {
+        top: 0;
+        left: 0;
+        padding-bottom: 0; /* הסרת רווחים מיותרים בווידאו */
+    }
+
+    /* התאמות אחרות */
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2; /* התאמת ריווח כותרות */
+    }
+    
+    p {
+        line-height: 1.5; /* התאמת ריווח בין שורות */
+    }
+
+/* ... סגנונות אחרים ... */
+
+/* מדיה קוורי להתאמה לניידים */
+
+    /* סגנון לכפתורי ניווט מותאם */
+    .navbar-toggler {
+        width: 2rem;
+        height: 2.5rem;
+    }
+
+    /* גודל טקסט קטן יותר */
+    .navbar-brand {
+        font-size: 1.2rem; /* גודל קטן יותר ללוגו */
+    }
+
+    /* התאמה לתוכן הגיבורים (Hero) */
+    .hero {
+        height: auto; /* מבטל את הגובה הקבוע */
+    }
+    .heroTextWrapper {
+        top: 10%;
+    }
+
+    .hero {
+        height: 100vh;
+    }
+    
+    .videoWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .heroTextWrapper {
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .heroText {
+        position: absolute;
+        z-index: 9;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        text-align: center;
+    }
+
+    .custom-video,
+    .news-detail-image {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .sticky-wrapper {
+        position: relative;
+        bottom: 10%; 
+    }
+
+    .heroText h1.faded-gold {
+        font-size: 2rem; /* אפשר להקטין את הגודל כדי להתאים למסך קטן */
+        color: #ffd700; 
+        background: linear-gradient(90deg, #ffd700, #ffcc00, #e0c469);
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        font-weight: bold; 
+        
+        /* 3D effect with shadows */
+        text-shadow: 
+		   0.125rem 0.125rem 0 #000,    
+            0.1875rem 0.1875rem 0 #444,    
+            0.25rem 0.25rem 0 #888,          
+            0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.5), 
+            0 0 0.625rem rgba(255, 215, 0, 0.8), 
+            0 0 1rem rgba(255, 215, 0, 0.6); 
+    }
+    
+    .row {
+        display: flex; 
+        align-items: flex-start; 
+    }
+
+    .framed-image {
+        width: 100%; 
+        max-width: 18.75rem; 
+        border: 0.3125rem solid #ffd700; 
+        padding: 0.625rem; 
+        box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5); 
+        margin-left: 0; /* אפשר לשנות את margin כדי להתאים למסך קטן */
+        margin-right: 0; /* הוספתי מרווח ימין לאפס */
+    }
+  
+    .about-image {
+        max-height: 4rem; /* 64px / 16 */
+        min-height: 15rem; /* 240px / 16 */
+    }
+    .team-image {
+        max-height: 25rem; /* 400px / 16 */
+        min-height: 20rem; /* 320px / 16 */
+    }
+
+    .team-thumb {
+        height: 2.5rem; /* 40px / 16 */
+    }
+
+    .team-thumb h3 {
+        font-size: 1.25rem; /* 20px / 16 */
+    }
+
+    .team-thumb p {
+        font-size: 0.875rem; /* 14px / 16 */
+    }
+
+    .album-cover {
+        width: 80%; /* 80% from the width */
+        max-width: 100%; /* Adjust to not exceed the container */
+    }
+
+    .portfolio-info {
+        margin: 0.5rem; /* 8px / 16 */
+    }
+	
+	/* Media Queries for mobile and smaller screens */
+
+  .photo-gallery-title {
+    margin-top: 0; /* Adjust the title margin for small screens */
+  }
+
+  .photogallery {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+    grid-template-rows: auto; /* Allow rows to auto adjust */
+    height: auto; /* Let the height be dynamic */
+  }
+
+  .news-title {
+    margin-left: 0; /* Remove left margin on mobile */
+    justify-content: center; /* Center align the title on mobile */
+  }
+
+  .news-thumb {
+    margin-left: 0; /* Adjust for mobile */
+  }
+
+  .news-category {
+    position: relative; /* Position categories relative */
+    margin-top: 10px; /* Optional: add some space between the image and category */
+  }
+
+  .news-two-column {
+    margin-left: 0; /* Adjust for mobile layout */
+  }
+
+
+
+/* Media Queries for small screens (phones, max-width 767px) */
+
+  .section-padding {
+    padding-top: 5rem; /* Reduce padding for smaller screens */
+    padding-bottom: 5rem;
+  }
+
+  .contact-info {
+    padding: 1.5rem; /* Reduce padding for smaller screens */
+  }
+
+  .site-footer {
+    padding-top: 3rem; /* Adjust padding for smaller screens */
+    padding-bottom: 2rem;
+  }
+
+  .site-footer .custom-link {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  /* Adjust links and text for mobile */
+  .hover-underline {
+    font-size: 1rem; /* Adjust text size */
+  }
+  
+  /* Adjust layout for mobile */
+  .site-footer .custom-link,
+  .site-footer .social-icon-link {
+    font-size: 0.9rem; /* Adjust social icon links and footer text size */
+  }
+  
+  /*---------------------------------------
+  RESPONSIVE STYLES               
+-----------------------------------------*/
+
+  
+  /* שינוי גודל כותרות */
+  h1 {
+    font-size: 1.75rem; /* 28px במקום 32px */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  h3 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  h4 {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  h5 {
+    font-size: 1rem; /* 16px */
+  }
+
+  h6 {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  /* התאמת ה-navbar לפלאפונים */
+  .navbar {
+    padding-top: 0.5rem; /* 8px */
+    padding-bottom: 0.5rem; /* 8px */
+  }
+
+  /* התאמת מרווחים במקטעים */
+  .section-padding {
+    padding-top: 4rem; /* הקטנת רווחים למכשירים קטנים יותר */
+    padding-bottom: 4rem;
+  }
+
+  /* שינוי במראה האייקונים של צוות */
+  .team-thumb {
+    left: 0;
+    width: 100%; /* שימוש ברוחב מלא במסכים קטנים */
+  }
+
+  /* שינוי במידות של תצוגת החדשות */
+  .news-two-column {
+    height: auto !important;
+    min-height: inherit;
+  }
+
+  .news .col-12 .news-two-column:first-child {
+    margin-bottom: 1.5rem; /* 24px */
+  }
+
+}
+/* מדיה קוורי למסכים גדולים יותר */
+@media screen and (min-width: 678px) {
+    .hero {
+        height: 100vh;
+    }
+    .heroTextWrapper {
+        position: absolute;
+        top: 20%; /* Adjust this value to raise/lower the text */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
