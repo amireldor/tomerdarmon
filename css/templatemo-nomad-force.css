@@ -1,3 +1,5 @@
+/*
+
 TemplateMo 567 Nomad Force
 
 https://templatemo.com/tm-567-nomad-force
@@ -5,7 +7,7 @@ https://templatemo.com/tm-567-nomad-force
 */
 
 /*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )            
+  CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
   --white-color:                  #FFFFFF;
@@ -47,7 +49,7 @@ body {
 }
 
 /*---------------------------------------
-  TYPOGRAPHY              
+  TYPOGRAPHY               
 -----------------------------------------*/
 
 h2,
@@ -109,7 +111,7 @@ p {
   color: var(--text-secondary-white-color);
 }
 
-a,
+a, 
 button {
   touch-action: manipulation;
   transition: all 0.3s;
@@ -164,7 +166,7 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: contain; /* Keeps entire video visible */
-padding-bottom: 0.25rem; /* 4px */
+	padding-bottom: 0.25rem; /* 4px */
 }
 
 /* Ensure .videoWrapper is positioned for this video only */
@@ -177,7 +179,7 @@ padding-bottom: 0.25rem; /* 4px */
 
 
 /*---------------------------------------
-  CUSTOM LINK              
+  CUSTOM LINK               
 -----------------------------------------*/
 .custom-links {
   max-width: 100%; /* התאמה לאחוזים במקום ערך פיקסלים */
@@ -222,7 +224,7 @@ strong {
 }
 
 /*---------------------------------------
-  NAVIGATION              
+  NAVIGATION               
 -----------------------------------------*/
 
 .navbar {
@@ -283,7 +285,7 @@ strong {
 }
 
 .navbar-nav .nav-item.active .nav-link,
-.nav-link:focus,
+.nav-link:focus, 
 .nav-link:hover {
   color: var(--dark-color);
 }
@@ -365,7 +367,7 @@ strong {
     .hero {
         height: 100vh;
     }
-   
+    
     .videoWrapper {
         position: absolute;
         top: 0;
@@ -399,42 +401,42 @@ strong {
         width: 100vw;
         height: 100vh;
     }
-   
+    
     .sticky-wrapper {
         position: relative;
-        bottom: 10%;
+        bottom: 10%; 
     }
 
     .heroText h1.faded-gold {
-        font-size: 3rem;
-        color: #ffd700;
+        font-size: 3rem; 
+        color: #ffd700; 
         background: linear-gradient(90deg, #ffd700, #ffcc00, #e0c469);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-       
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        font-weight: bold; 
+        
         /* 3D effect with shadows */
-        text-shadow:
+        text-shadow: 
             0.1875rem 0.1875rem 0 #000,    
             0.3125rem 0.3125rem 0 #444,    
             0.5rem 0.5rem 0 #888,          
-            0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.5),
-            0 0 1.25rem rgba(255, 215, 0, 0.8),
-            0 0 2.5rem rgba(255, 215, 0, 0.6);
+            0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.5), 
+            0 0 1.25rem rgba(255, 215, 0, 0.8), 
+            0 0 2.5rem rgba(255, 215, 0, 0.6); 
     }
-   
+    
     .row {
-        display: flex;
-        align-items: flex-start;
+        display: flex; 
+        align-items: flex-start; 
     }
 
     .framed-image {
-        width: 100%;
-        max-width: 18.75rem;
-        border: 0.3125rem solid #ffd700;
-        padding: 0.625rem;
-        box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5);
-        margin-left: 5.3125rem;
+        width: 100%; 
+        max-width: 18.75rem; 
+        border: 0.3125rem solid #ffd700; 
+        padding: 0.625rem; 
+        box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5); 
+        margin-left: 5.3125rem; 
     }
 }
 
@@ -545,10 +547,10 @@ strong {
 }
 
 /*---------------------------------------
-  ABOUT & TEAM MEMBERS              
+  ABOUT & TEAM MEMBERS               
 -----------------------------------------*/
 .about-image {
-width: 100%;
+	 width: 100%;
   height: 80%;
   max-height: 6.25rem; /* 100px / 16 */
   min-height: 29.6875rem; /* 475px / 16 */
@@ -564,12 +566,12 @@ width: 100%;
 
 .team-thumb {
     background: var(--white-color); /* Default background */
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
     width: 50%; /* Set a percentage width as needed */
     max-width: 90%; /* Ensure it doesn’t exceed the container */
-height: 3.125rem; /* 50px / 16 */
+	height: 3.125rem; /* 50px / 16 */
     padding: 0.3125rem 0.625rem; /* 5px, 10px / 16 */
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px, 8px / 16 */
 }
@@ -582,7 +584,7 @@ height: 3.125rem; /* 50px / 16 */
 }
 
 
-.carousel-control-next,
+.carousel-control-next, 
 .carousel-control-prev {
   top: 10px; /* Keep this value to position arrows at the top */
   bottom: auto; /* Reset bottom */
@@ -599,7 +601,7 @@ height: 3.125rem; /* 50px / 16 */
   right: 1rem; /* Adjust this value to separate the icons further */
 }
 
-.carousel-control-next-icon,
+.carousel-control-next-icon, 
 .carousel-control-prev-icon {
   background-color: var(--dark-color);
   background-size: 100% 100%;
@@ -617,7 +619,7 @@ height: 3.125rem; /* 50px / 16 */
 
 
 /*---------------------------------------
-  PORTFOLIO              
+  PORTFOLIO               
 -----------------------------------------*/
 
 .portfolio-thumb {
@@ -640,7 +642,7 @@ height: 3.125rem; /* 50px / 16 */
 }
 
 .album-container {
-margin-top: 1.25rem; /* 20px / 16 */
+	margin-top: 1.25rem; /* 20px / 16 */
     display: flex; /* Enables flexbox for alignment */
     justify-content: center; /* Centers the album cover horizontally */
 }
@@ -702,7 +704,7 @@ margin-top: 1.25rem; /* 20px / 16 */
 
 
 /*---------------------------------------
-  NEWS & EVENTS              
+  NEWS & EVENTS               
 -----------------------------------------*/
 
 .photo-gallery-title {
@@ -914,14 +916,14 @@ h2 {
   }
 
   /* הוסף סגנונות נוספים כאן לפי הצורך */
- 
+  
   grid-template-columns: 1fr 1fr; /* 2 עמודות על מסכים קטנים יותר */
 
 }
 
 
 /*---------------------------------------
-  SECTION              
+  SECTION               
 -----------------------------------------*/
 .section-padding {
   padding-top: 7rem;
@@ -946,7 +948,7 @@ h2 {
 }
 
 /*---------------------------------------
-  SITE FOOTER              
+  SITE FOOTER               
 -----------------------------------------*/
 .site-footer {
   background: var(--dark-color);
@@ -993,7 +995,7 @@ h2 {
 }
 
 /*---------------------------------------
-  SOCIAL ICON              
+  SOCIAL ICON               
 -----------------------------------------*/
 .social-icon {
   margin: 0;
@@ -1021,7 +1023,7 @@ h2 {
 }
 
 /*---------------------------------------
-  RESPONSIVE STYLES              
+  RESPONSIVE STYLES               
 -----------------------------------------*/
 @media screen and (min-width: 768px) { /* 768px ומעלה */
   .social-icon-link {
@@ -1145,7 +1147,7 @@ h2 {
     .videoWrapper {
         padding-bottom: 75%; /* שינוי יחס גובה-רוחב לווידאו */
     }
-   
+    
     .custom-video {
         top: 0;
         left: 0;
@@ -1156,7 +1158,7 @@ h2 {
     h1, h2, h3, h4, h5, h6 {
         line-height: 1.2; /* התאמת ריווח כותרות */
     }
-   
+    
     p {
         line-height: 1.5; /* התאמת ריווח בין שורות */
     }
@@ -1187,7 +1189,7 @@ h2 {
     .hero {
         height: 100vh;
     }
-   
+    
     .videoWrapper {
         position: absolute;
         top: 0;
@@ -1221,45 +1223,45 @@ h2 {
         width: 100vw;
         height: 100vh;
     }
-   
+    
     .sticky-wrapper {
         position: relative;
-        bottom: 10%;
+        bottom: 10%; 
     }
 
     .heroText h1.faded-gold {
         font-size: 2rem; /* אפשר להקטין את הגודל כדי להתאים למסך קטן */
-        color: #ffd700;
+        color: #ffd700; 
         background: linear-gradient(90deg, #ffd700, #ffcc00, #e0c469);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-       
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        font-weight: bold; 
+        
         /* 3D effect with shadows */
-        text-shadow:
-  0.125rem 0.125rem 0 #000,    
+        text-shadow: 
+		   0.125rem 0.125rem 0 #000,    
             0.1875rem 0.1875rem 0 #444,    
             0.25rem 0.25rem 0 #888,          
-            0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.5),
-            0 0 0.625rem rgba(255, 215, 0, 0.8),
-            0 0 1rem rgba(255, 215, 0, 0.6);
+            0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.5), 
+            0 0 0.625rem rgba(255, 215, 0, 0.8), 
+            0 0 1rem rgba(255, 215, 0, 0.6); 
     }
-   
+    
     .row {
-        display: flex;
-        align-items: flex-start;
+        display: flex; 
+        align-items: flex-start; 
     }
 
     .framed-image {
-        width: 100%;
-        max-width: 18.75rem;
-        border: 0.3125rem solid #ffd700;
-        padding: 0.625rem;
-        box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5);
+        width: 100%; 
+        max-width: 18.75rem; 
+        border: 0.3125rem solid #ffd700; 
+        padding: 0.625rem; 
+        box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5); 
         margin-left: 0; /* אפשר לשנות את margin כדי להתאים למסך קטן */
         margin-right: 0; /* הוספתי מרווח ימין לאפס */
     }
- 
+  
     .about-image {
         max-height: 4rem; /* 64px / 16 */
         min-height: 15rem; /* 240px / 16 */
@@ -1289,8 +1291,8 @@ h2 {
     .portfolio-info {
         margin: 0.5rem; /* 8px / 16 */
     }
-
-/* Media Queries for mobile and smaller screens */
+	
+	/* Media Queries for mobile and smaller screens */
 
   .photo-gallery-title {
     margin-top: 0; /* Adjust the title margin for small screens */
@@ -1346,18 +1348,18 @@ h2 {
   .hover-underline {
     font-size: 1rem; /* Adjust text size */
   }
- 
+  
   /* Adjust layout for mobile */
   .site-footer .custom-link,
   .site-footer .social-icon-link {
     font-size: 0.9rem; /* Adjust social icon links and footer text size */
   }
- 
+  
   /*---------------------------------------
-  RESPONSIVE STYLES              
+  RESPONSIVE STYLES               
 -----------------------------------------*/
 
- 
+  
   /* שינוי גודל כותרות */
   h1 {
     font-size: 1.75rem; /* 28px במקום 32px */
