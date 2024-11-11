@@ -161,7 +161,7 @@ a:hover {
 /* Only target this specific video */
 #lncrehearsals-video {
     position: absolute;
-     top: -20%; /* 230px מבוסס על יחס האחוזים למסך */
+     top: -30%; /* 230px מבוסס על יחס האחוזים למסך */
     left: 0;
     width: 100%;
     height: 100%;
