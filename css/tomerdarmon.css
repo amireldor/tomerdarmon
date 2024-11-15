@@ -1,5 +1,12 @@
-.nice-images img {
-  box-shadow: 0 0 20px #ffd700;
+.nice-images {
+  img {
+    box-shadow: 0 0 20px #ffd700;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.02);
+  }
 }
 
 .carousel-control-prev,
