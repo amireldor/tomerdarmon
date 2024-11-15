@@ -30,7 +30,7 @@
   height: 550px;
   text-align: left;
 
-  display: inline-grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: stretch;
