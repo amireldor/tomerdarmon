@@ -1,0 +1,9 @@
+.image-shadow {
+  box-shadow: 0 0 20px #ffd700;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 2.5rem;
+  bottom: auto;
+}
